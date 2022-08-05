@@ -1,9 +1,8 @@
 import type {NextPage} from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../../styles/Home.module.css'
 import {Box, Stack, Typography} from "@mui/material";
-import LOGO from "../../public/logo-2000x2000.png"
+import LOGO from "../../public/logo-2000x2000.webp"
 import GITHUB from "../../public/github.png"
 import MAIL from "../../public/mail.png"
 import {Custom} from "../theme/theme";
@@ -19,9 +18,10 @@ const Home: NextPage = () => {
                 <link rel="icon" href="/public/favicon.ico"/>
             </Head>
 
-            <main className={styles.main}>
+            <main>
 
-                <Stack width={"100%"} alignItems={"center"}>
+                <Stack width={"100%"} alignItems={"center"} minHeight={"100vh"} flex={1} display={"flex"}
+                       flexDirection={"column"} justifyContent={"center"}>
 
                     <Stack maxWidth={400}>
                         <Image src={LOGO} width={400} height={400}/>
@@ -48,7 +48,7 @@ const Home: NextPage = () => {
 
                     </Stack>
                 </Stack>
-                
+
             </main>
 
             <footer>
